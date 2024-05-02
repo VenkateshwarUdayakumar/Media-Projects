@@ -1,0 +1,184 @@
+{
+  "args": [
+    {
+      "name": "--log-each-step",
+      "key": "log_each_step",
+      "display_name": "log each step",
+      "help": "log each step",
+      "values": [
+        {
+          "name": "Enabled",
+          "key": "Enabled",
+          "display_name": "Enabled",
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "--window",
+      "key": "window",
+      "display_name": "window",
+      "help": "Apply window function.",
+      "values": [
+        {
+          "name": "Enabled",
+          "key": "Enabled",
+          "display_name": "Enabled",
+          "type": "checkbox"
+        },
+        {
+          "name": "start_time",
+          "key": "start_time",
+          "display_name": "start_time",
+          "help": "Window start time.",
+          "type": "textbox"
+        },
+        {
+          "name": "length",
+          "key": "length",
+          "display_name": "length",
+          "help": "Window duration in seconds.",
+          "type": "textbox"
+        },
+        {
+          "name": "auto_length",
+          "key": "auto_length",
+          "display_name": "auto_length",
+          "help": "Automatically determine a good window size.",
+          "type": "checkbox"
+        },
+        {
+          "name": "sticky_start_time",
+          "key": "sticky_start_time",
+          "display_name": "sticky_start_time",
+          "help": "Center the window at the signal peak closest to the given start time.",
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "--downsample",
+      "key": "downsample",
+      "display_name": "downsample",
+      "help": "downsample the input signal",
+      "values": [
+        {
+          "name": "Enabled",
+          "key": "Enabled",
+          "display_name": "Enabled",
+          "type": "checkbox"
+        },
+        {
+          "name": "Factor",
+          "key": "Factor",
+          "display_name": "Factor",
+          "type": "textbox"
+        }
+      ]
+    },
+    {
+      "name": "--detrend",
+      "key": "detrend",
+      "display_name": "detrend",
+      "help": "detrend the input signal",
+      "values": [
+        {
+          "name": "Enabled",
+          "key": "Enabled",
+          "display_name": "Enabled",
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "--remove-powerline-noise",
+      "key": "remove_powerline_noise",
+      "display_name": "remove powerline noise",
+      "help": "apply a filter to remove 50-60 Hz noise and their harmonics",
+      "values": [
+        {
+          "name": "Enabled",
+          "key": "Enabled",
+          "display_name": "Enabled",
+          "type": "checkbox"
+        },
+        {
+          "name": "Frequency",
+          "key": "Frequency",
+          "display_name": "Frequency",
+          "type": "radiobutton",
+          "items": [
+            "50hz",
+            "60hz"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "--limit-bandwidth",
+      "key": "limit_bandwidth",
+      "display_name": "limit bandwidth",
+      "help": "limit bandwidth",
+      "values": [
+        {
+          "name": "Enabled",
+          "key": "Enabled",
+          "display_name": "Enabled",
+          "type": "checkbox"
+        },
+        {
+          "name": "Lower Limit",
+          "key": "Lower Limit",
+          "display_name": "Lower Limit",
+          "type": "textbox"
+        },
+        {
+          "name": "Upper Limit",
+          "key": "Upper Limit",
+          "display_name": "Upper Limit",
+          "type": "textbox"
+        }
+      ]
+    },
+    {
+      "name": "--sample-rate",
+      "key": "sample_rate",
+      "display_name": "sample rate",
+      "values": [
+        {
+          "name": "Sample Rate",
+          "key": "Sample Rate",
+          "display_name": "Sample Rate",
+          "help": "input data sample rate",
+          "type": "textbox"
+        }
+      ]
+    },
+    {
+      "name": "--physio-type",
+      "key": "physio_type",
+      "display_name": "physio type",
+      "help": "input signal type",
+      "values": [
+        {
+          "name": "Enabled",
+          "key": "Enabled",
+          "display_name": "Enabled",
+          "type": "checkbox"
+        },
+        {
+          "name": "Frequency",
+          "key": "Frequency",
+          "display_name": "Frequency",
+          "type": "radiobutton",
+          "items": [
+            "ecg",
+            "eeg",
+            "rsp",
+            "eng"
+          ]
+        }
+      ]
+    }
+  ]
+}
