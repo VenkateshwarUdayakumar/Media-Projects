@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Weather Report</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+        }
+        .cloud-container {
+            position: relative;
+            width: 500px; /* Adjust width as needed */
+            height: 200px; /* Adjust height as needed */
+            margin: 100px auto; /* Adjust margin as needed */
+        }
+        .cloud-circle {
+            position: absolute;
+            background-color: aliceblue;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .cloud-circle:nth-child(1) {
+            width: 60px;
+            height: 60px;
+            top: 20px;
+            left: 50px;
+        }
+        .cloud-circle:nth-child(2) {
+            width: 70px;
+            height: 70px;
+            top: 40px;
+            left: 120px;
+        }
+        .cloud-circle:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            top: 30px;
+            left: 200px;
+        }
+        .cloud-circle:nth-child(4) {
+            width: 70px;
+            height: 70px;
+            top: 60px;
+            left: 300px;
+        }
+        .cloud-circle:nth-child(5) {
+            width: 90px;
+            height: 90px;
+            top: 50px;
+            left: 400px;
+        }
+        .cloud-circle:nth-child(6) {
+            width: 80px;
+            height: 80px;
+            top: 90px;
+            left: 80px;
+        }
+        .cloud-circle:nth-child(7) {
+            width: 70px;
+            height: 70px;
+            top: 100px;
+            left: 180px;
+        }
+        .cloud-circle:nth-child(8) {
+            width: 60px;
+            height: 60px;
+            top: 110px;
+            left: 260px;
+        }
+        .cloud-circle:nth-child(9) {
+            width: 70px;
+            height: 70px;
+            top: 100px;
+            left: 350px;
+        }
+        .cloud-circle:nth-child(10) {
+            width: 60px;
+            height: 60px;
+            top: 70px;
+            left: 420px;
+        }
+        .weather-info {
+            position: relative;
+            background-color: aliceblue;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            margin: 10px 0;
+            color: white;
+        }
+        table {
+            background-color: aliceblue;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid white;
+        }
+        th {
+            background-color: cornflowerblue;
+            color: white;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: cornflowerblue;
+            color: white;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: black; font-size: 80px; text-align: center; position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%); z-index: 9999; font-weight: bold"><br/>Max Weather Report</h1>
+    <div class="cloud-container">
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+        <div class="cloud-circle"></div>
+    </div>
+    <div class="input-container">
+        <form action="/" method="post">
+            <label for="city_name" style="color: white">Enter City Name:</label>
+            <input type="text" id="city_name" name="city_name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="weather-info" style="color: black">
+        <p>Population of {{ city_name }} is {{ population }}</p>
+        <p>Country of {{ city_name }} is {{ country }}</p>
+        <p>Latitude of {{ city_name }} is {{ latitude }}</p>
+        <p>Longitude of {{ city_name }} is {{ longitude }}</p>
+    </div>
+    <table>
+        <tr>
+            <th style="background-color: #4CAF50">Statistic</th>
+            <th style="background-color: #4CAF50">Value</th>
+            <th style="background-color: #4CAF50">Time</th>
+        </tr>
+        {% for stat in maxData %}
+        <tr>
+            <td>{{ stat.name }}</td>
+            <td>{{ stat.value }}</td>
+            <td>{{ stat.time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
