@@ -1,0 +1,196 @@
+html {
+    background-color: cornflowerblue;
+    margin: 0;
+}
+.basic {
+    background-color: aliceblue;
+    color: cornflowerblue;
+    border-color: cornflowerblue;
+    height: 100px;
+    width: 300px;
+    font-size: 50px;
+    border-radius: 30px;
+    margin: 50px
+}
+.basic:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+.title {
+    text-align: center;
+    font-size: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+.graphtitle {
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+.bubble {
+    text-align: center;
+    width: 1000px;
+    background-color: aliceblue;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 50px auto auto;
+    color: cornflowerblue;
+    font-size: 50px;
+    padding: 25px;
+}
+.graphbubble {
+    text-align: left;
+    width: 1200px;
+    background-color: aliceblue;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 50px auto auto;
+    color: cornflowerblue;
+    padding: 25px;
+    font-size: 10px;
+}
+.userinfo {
+    background-color: cornflowerblue;
+    color: aliceblue;
+    border-color: cornflowerblue;
+    height: 50px;
+    width: 500px;
+    font-size: 50px;
+    border-radius: 15px;
+    outline: none;
+}
+.datatablecontainer {
+    text-align: left;
+    width: 1250px;
+    height: 1050px;
+    background-color: aliceblue;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 25px auto auto;
+    color: cornflowerblue;
+    font-size: 50px;
+    padding: 25px;
+}
+.datatableheader {
+    margin-top: 0;
+    text-align: center;
+    font-size: 75px;
+    height: 650px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+.speed {
+    border-color: black;
+    background-color: aliceblue;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 25px;
+    margin-right: 25px
+}
+.leftcontainer {
+    float: left;
+    width: 350px;
+    height: 500px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.uploader {
+    border-color: black;
+    background-color: aliceblue;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 25px
+}
+.uploader:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+.extras {
+    width: 220px;
+    height: 70px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    color: aliceblue;
+    background-color: cornflowerblue;
+    margin: 25px auto auto;
+    padding: 15px;
+}
+.extrasconfig {
+    height: 725px;
+    width: auto;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    color: aliceblue;
+    background-color: darkseagreen;
+    margin: 25px auto auto;
+    padding: 15px;
+    text-align: left;
+}
+.rightcontainer {
+    float: right;
+    width: 800px;
+    height: 985px;
+    margin-top: 0;
+    margin-right: 25px;
+    overflow: auto;
+    font-size: 10px;
+}
+.scrollingtable {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    table-layout: fixed;
+    color: black;
+    background-color: cornflowerblue;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.scrollingtableaidan {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    table-layout: fixed;
+    color: black;
+    background-color: lightsalmon;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.scrollingtablemithu {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    table-layout: fixed;
+    color: black;
+    background-color: darkseagreen;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.regtable {
+    table-layout: fixed;
+    color: black;
+    background-color: white;
+    font-size: 15px;
+}
+.outliertableheader {
+    background-color: firebrick;
+    color: darkseagreen;
+}
+.outliertablebody {
+    background-color: firebrick;
+    color: white;
+}
+.tooltip {
+    font-size: 15px;
+}
